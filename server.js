@@ -6,12 +6,12 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+
+// CORS configuration
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? 'https://your-vercel-app-url.vercel.app' 
-    : 'http://localhost:3000',
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE']
+  origin: '*', // Allow all origins in development
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
 
 // MongoDB Connection
