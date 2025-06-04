@@ -10,13 +10,12 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
 app.use(express.json());
 
 // CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://todo-app-mu-topaz-28.vercel.app/', 'http://localhost:3000']
+    ? ['https://todo-app-mu-topaz-28.vercel.app', 'http://localhost:3000']
     : 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
