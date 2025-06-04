@@ -26,7 +26,7 @@ import {
 import { Delete as DeleteIcon, Edit as EditIcon, Brightness4 as DarkModeIcon, Brightness7 as LightModeIcon, GitHub as GitHubIcon, Twitter as TwitterIcon, Article as ArticleIcon } from '@mui/icons-material';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_URL = "https://todo-app-production-9adc.up.railway.app/api";
 
 // Configure axios defaults
 axios.defaults.withCredentials = true;
