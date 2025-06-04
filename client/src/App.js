@@ -79,7 +79,7 @@ function App() {
       setPriority('medium');
       fetchTodos();
     } catch (error) {
-      console.error('Error saving todo:', error);
+      console.error('Error saving a todo:', error);
     }
   };
 
